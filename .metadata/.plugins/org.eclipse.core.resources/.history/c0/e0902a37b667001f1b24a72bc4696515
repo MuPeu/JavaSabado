@@ -1,0 +1,32 @@
+package aula4;
+
+import java.util.Scanner;
+
+public class CarrinhoDeMercado {
+
+	public static void main(String[] args) {
+		//Variaveis
+		double valor_total_compra = 0.0;
+		float valor_feijao = 5.5f;
+		float valor_arroz = 4.1f;
+		float valor_macarrao = 2.3f;
+		
+		String produto;
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		//Entrada
+		System.out.println("Digite o nome do Produto:");
+		System.out.println("Feijão, Arroz ou  Macarrão.");
+		produto = teclado.nextLine();
+		
+		//Processamento
+		if (produto.equals("feijão"))
+			valor_total_compra += valor_feijao;
+		else if (produto.equals("arroz"))
+			valor_total_compra += valor_arroz;
+		
+
+	}
+
+}

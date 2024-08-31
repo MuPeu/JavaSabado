@@ -1,0 +1,22 @@
+package aula4;
+
+import java.util.Scanner;
+
+public class QualMesComSwitch {
+
+	public static void main(String[] args) {
+		// Variavel
+		int mes;
+		Scanner teclado = new Scanner(System.in);
+		
+		//Entrada
+		System.out.println("Entre um valor referente ao mês:");
+		mes = teclado.nextInt();
+		
+		switch (mes) {
+			case 1: System.out.println("Janeiro");
+		}
+
+	}
+
+}
