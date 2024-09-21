@@ -1,0 +1,17 @@
+package aula7;
+
+public class TesteDaConta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conta minhaConta;
+		minhaConta = new Conta();
+		
+		minhaConta.titular = "Murillo";
+		minhaConta.numero = 433946;
+		minhaConta.saldo = 800.00;
+		minhaConta.limite = 25.00;
+		
+	}
+
+}

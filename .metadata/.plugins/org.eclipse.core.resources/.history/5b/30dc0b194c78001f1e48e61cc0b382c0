@@ -1,0 +1,48 @@
+package aula7;
+
+import javax.swing.JOptionPane;
+
+public class OperacaoBancaria {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conta destino = new Conta();
+		Conta origem = new Conta();
+		
+		destino.setTitular(JOptionPane.showInputDialog("Digite o nome do destinatario:"));
+		
+		destino.setSNumero(JOptionPane.showInputDialog("Digite o número da conta do destinatario:"));
+		destino.setNumero(Integer.parseInt(destino.getSNumero()));
+		
+		destino.setSSaldo(JOptionPane.showInputDialog("Digite o saldo da conta do destinatario:"));
+		destino.setSaldo(Double.parseDouble(destino.getSSaldo()));
+		
+		destino.setSLimite(JOptionPane.showInputDialog("Digite o limite do destinatario:"));
+		destino.setLimite(Double.parseDouble(destino.getSLimite()));
+		
+		JOptionPane.showMessageDialog(null, "O saldo da conta de " + destino.getTitular() + ", é de: " + destino.getSaldo());
+		
+		origem.titular = JOptionPane.showInputDialog("Digite o seu nome:");
+		
+		origem.sNumero = JOptionPane.showInputDialog("Digite o número da sua conta:");
+		origem.numero = Integer.parseInt(origem.sNumero);
+		
+		origem.sSaldo = JOptionPane.showInputDialog("Digite o saldo da sua conta:");
+		origem.saldo = Double.parseDouble(origem.sSaldo);
+		
+		origem.sLimite = JOptionPane.showInputDialog("Digite o seu limite:");
+		origem.limite = Double.parseDouble(origem.sLimite);
+		
+		origem.sValor = JOptionPane.showInputDialog("Quanto você quer depositar?");
+		origem.valor = Double.parseDouble(origem.sValor);
+		
+		origem.transfere(destino, origem.valor);
+		
+		if (origem.aprovado) {
+		JOptionPane.showMessageDialog(null, "O saldo da conta de " + origem.titular + ", agora é de " + origem.saldo);
+		JOptionPane.showMessageDialog(null, "O saldo da conta de " + destino.titular + ", ficou com " + destino.saldo);
+		}
+
+	}
+
+}

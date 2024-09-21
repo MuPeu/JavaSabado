@@ -1,0 +1,26 @@
+package aula7;
+
+public class Conta {
+	int numero;
+	String titular;
+	double saldo, limite;
+
+	boolean saca(double quantidade){
+		if (this.saldo < quantidade) {
+			System.out.println("Saldo Insuficiente");
+			return false;
+		}
+		
+		else{
+			saldo -= quantidade;
+			return true;
+		}
+
+	}
+	
+	void deposito(double quantidade) {
+		saldo += quantidade;
+		
+	}
+	
+}

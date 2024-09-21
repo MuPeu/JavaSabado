@@ -48,12 +48,13 @@ public class QualMes {
 			break;
 
 			case 2:
-				System.out.println("Digite o nome do mês: ");
+				System.out.print("Digite o nome do mês: ");
 				mesname = teclado.nextLine();
+				mesname.toUpperCase();
 				
-				if(mesname.equals("Janeiro") || mesname.equals("janeiro"))
+				if(mesname == ("JANEIRO"))
 					System.out.println("\nJaneiro é o mês 1!");
-				else if(mesname.equals("Feveiro") || mesname.equals("feveiro"))
+				else if(mesname.equals("FEVEREIRO"))
 					System.out.println("\nFeveiro é o mês 2!");
 				else if(mesname.equals("Março") || mesname.equals("março"))
 					System.out.println("\nFeveiro é o mês 3!");
@@ -76,7 +77,7 @@ public class QualMes {
 				else if(mesname == "Dezembro" || mesname == "dezembro")
 					System.out.println("\nDezembro é o mês 12!");
 				else
-					System.out.println("Mês não existe!");
+					System.out.println("\nMês não existe!");
 			break;
 		}
 		teclado.close();

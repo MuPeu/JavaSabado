@@ -1,0 +1,37 @@
+package aula7;
+
+import javax.swing.JOptionPane;
+
+public class TesteDaConta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conta minhaConta;
+		minhaConta = new Conta();
+		
+		minhaConta.titular = JOptionPane.showInputDialog("Digite o seu nome:");
+		
+		minhaConta.sNumero = JOptionPane.showInputDialog("Digite o número da sua conta:");
+		minhaConta.numero = Integer.parseInt(minhaConta.sNumero);
+		
+		minhaConta.sSaldo = JOptionPane.showInputDialog("Digite o seu saldo:");
+		minhaConta.saldo = Double.parseDouble(minhaConta.sSaldo);
+		
+		minhaConta.sLimite = JOptionPane.showInputDialog("Digite o limite para gastar:");
+		minhaConta.limite = Double.parseDouble(minhaConta.sLimite);
+		
+		JOptionPane.showMessageDialog(null, "O saldo da conta é: " + minhaConta.saldo);
+		
+		minhaConta.sQuantidade = JOptionPane.showInputDialog("Quanto você quer sacar?");
+		minhaConta.quantidade = Double.parseDouble(minhaConta.sQuantidade);
+		minhaConta.saca(minhaConta.quantidade);
+		
+		minhaConta.sQuantidade = JOptionPane.showInputDialog("Quanto você quer depositar?");
+		minhaConta.quantidade = Double.parseDouble(minhaConta.sQuantidade);
+		minhaConta.deposito(minhaConta.quantidade);
+		
+		JOptionPane.showMessageDialog(null, "Depois das operações, o saldo da conta é: " + minhaConta.saldo);
+		
+	}
+
+}

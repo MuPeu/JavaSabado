@@ -1,0 +1,103 @@
+package aula7;
+
+import javax.swing.JOptionPane;
+
+public class Conta {
+	private int numero;
+	private String titular, sNumero, sSaldo, sLimite, sQuantidade, sValor;
+	private double saldo, limite, quantidade, valor;
+	private boolean aprovado;
+	
+	public int getNumero() {
+		return this.numero;
+	}
+	
+	public String getTitular() {
+		return this.titular;
+	}
+	
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	
+	public String getSNumero() {
+		return this.sNumero;
+	}
+	
+	public String getSSaldo() {
+		return this.sSaldo;
+	}
+	
+	public String getSLimite() {
+		return this.sLimite;
+	}
+	
+	public String getSQuantidade() {
+		return this.sQuantidade;
+	}
+	
+	public String getSValor() {
+		return this.sValor;
+	}
+	
+	public double getSaldo() {
+		return this.saldo;
+	}
+	
+	public double getLimite() {
+		return this.limite;
+	}
+	
+	
+
+	public boolean saca(double quantidade){
+		if (this.saldo < quantidade) {
+			JOptionPane.showMessageDialog(null, "Saldo Insuficiente");
+			return false;
+		}
+		
+		else{
+			saldo -= quantidade;
+			return true;
+		}
+
+	}
+	
+	public void deposito(double quantidade) {
+		saldo += quantidade;
+		
+	}
+	
+	public boolean transfere(Conta destino, double valor) {
+		boolean saqueOK = this.saca(valor);
+		if (saqueOK == false){
+			JOptionPane.showMessageDialog(null, "Transferência não realizada");
+			aprovado = false;
+			return false;
+			
+		}
+		else {
+			if (valor < 0) {
+				JOptionPane.showMessageDialog(null, "O valor à ser tranferir é inválido");
+				aprovado = false;
+			}
+			else if (valor > this.saldo) {
+				JOptionPane.showMessageDialog(null, "O valor à ser transferido utrapassa o seu saldo.\nO valor é inválido");
+				aprovado = false;
+			}
+			else if (valor > this.limite) {
+				JOptionPane.showMessageDialog(null, "O limite da conta foi atingido");
+				aprovado = false;
+			}
+			else {
+				this.saldo -= valor;
+				destino.deposito(valor);
+				aprovado = true;
+			}
+			
+			return true;
+		
+		}
+	}
+	
+}

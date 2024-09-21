@@ -1,0 +1,16 @@
+package aula7;
+
+import javax.swing.JOptionPane;
+
+public class UmNovoTeste {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conta outraconta = new Conta();
+		
+		outraconta.sSaldo = JOptionPane.showInputDialog("Digite o saldo da conta:");
+		outraconta.saldo = Double.parseDouble(outraconta.sSaldo);
+		
+	}
+
+}

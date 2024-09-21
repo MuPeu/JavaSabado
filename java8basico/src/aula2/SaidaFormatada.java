@@ -6,7 +6,7 @@ public class SaidaFormatada {
 		//Descrição de variaveis
 		float nota = 9.6f;   //definir e inicializar a variável
 		String nome = "Murilo"; //definir a variável string
-		String alien = "Mestre Yoda";
+		//String alien = "Mestre Yoda";
 		
 		//Processamento e Saida
 		System.out.println("Sua nota é " + nota);   //concatenar = juntar
