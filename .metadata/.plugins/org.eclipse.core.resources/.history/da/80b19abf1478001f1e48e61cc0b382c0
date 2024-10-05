@@ -1,8 +1,0 @@
-package aula7;
-
-public class Conta {
-	int numero;
-	String titular;
-	double saldo, limite;
-
-}

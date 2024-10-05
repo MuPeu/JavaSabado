@@ -1,0 +1,12 @@
+package aula8;
+
+public class ArrayOrdenada {
+
+	public static void main(String[] args) {
+		String[] nome = {"Lucas", "Daniel", "Julia", "Taciana", "Isabela", "Matheus"};
+		char[] vogais = {'i', 'g', 'a', 'o', 'e'};
+		int[] numeros = {9, 2, 6, 7, 5, 3, 4, 8, 1, 0};
+
+	}
+
+}

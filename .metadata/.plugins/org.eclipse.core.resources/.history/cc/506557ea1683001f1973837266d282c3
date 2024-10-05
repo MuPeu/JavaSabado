@@ -1,0 +1,13 @@
+package aula8;
+
+public class CriaArrayC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] c = new int[12];
+		
+		
+
+	}
+
+}
