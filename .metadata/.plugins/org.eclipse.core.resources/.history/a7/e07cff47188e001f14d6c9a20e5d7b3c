@@ -1,0 +1,10 @@
+package aula9;
+
+public class Adicao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
