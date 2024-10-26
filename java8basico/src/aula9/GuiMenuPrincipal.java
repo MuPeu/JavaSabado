@@ -7,6 +7,7 @@ import javax.swing.*;
 
 public class GuiMenuPrincipal extends JFrame{
 
+	private static final long serialVersionUID = 1L;
 	private Container contentPane;
 	private JMenuBar mnBarra;
 	private JMenu mnArquivo, mnExemplos;

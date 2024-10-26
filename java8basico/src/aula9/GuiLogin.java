@@ -7,6 +7,7 @@ import javax.swing.*;
 
 public class GuiLogin extends JFrame{
 	
+	private static final long serialVersionUID = 1L;
 	private JTextField tfLogin;
 	private JLabel lbSenha;
 	private JLabel lbLogin;

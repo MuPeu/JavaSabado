@@ -6,6 +6,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class GuiBotao extends JFrame{
+	private static final long serialVersionUID = 1L;
 	private JButton btnMensagem, btnTeimoso;
 	private ImageIcon imageIcon1;
 	
